@@ -1,0 +1,126 @@
+.browse-items {
+  max-width: 1200px;
+  margin: 50px auto;
+  padding: 0 20px;
+  font-family: "Poppins", sans-serif;
+}
+
+.item-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 35px;
+}
+
+.item-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  border-radius: 1rem;
+  background-color: #fff;
+  color: #374151;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.item-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 25px rgba(59, 130, 246, 0.2);
+}
+
+.item-image {
+  width: 90%;
+  margin: 0 auto;
+  height: 180px;
+  margin-top: 1rem;
+  border-radius: 0.75rem;
+  object-fit: cover;
+  background: linear-gradient(to right, #3b82f6, #2563eb);
+  box-shadow: 0 4px 10px rgba(59, 130, 246, 0.3);
+  transition: transform 0.3s ease;
+}
+
+.item-card:hover .item-image {
+  transform: scale(1.05);
+}
+
+.status-badge {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  padding: 6px 12px;
+  border-radius: 0.5rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #fff;
+  letter-spacing: 0.5px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.status-badge.lost {
+  background-color: #dc2626; 
+}
+
+.status-badge.found {
+  background-color: #16a34a; 
+}
+
+.item-info {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0rem;
+  border-top: 1px solid #e5e7eb;
+}
+
+.item-info h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #1e3a8a;
+  margin-bottom: 0rem;
+}
+
+.item-info p {
+  font-size: 0.95rem;
+  color: #4b5563;
+  line-height: 1.2;
+}
+
+.item-info b {
+  color: #111827;
+}
+
+.item-btn {
+  margin: 0 1.5rem 1.5rem;
+  align-self: flex-start;
+  background-color: #3b82f6;
+  color: #fff;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 10px 16px;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+  transition: all 0.3s ease;
+}
+
+.item-btn:hover {
+  background-color: #2563eb;
+  box-shadow: 0 6px 16px rgba(37, 99, 235, 0.4);
+  transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+  .item-grid {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+  .item-image {
+    height: 160px;
+  }
+}
