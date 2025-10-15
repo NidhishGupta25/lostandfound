@@ -1,0 +1,134 @@
+.form {
+  max-width: 500px;
+  width: 100%;
+  background-color: #fff;
+  padding: 30px 25px;
+  border-radius: 50px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  margin: -30px auto 100px 500px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.titlee {
+  font-size: 1.8rem;
+  font-weight: bolder;
+  color: royalblue;
+  text-align: center;
+  position: relative;
+  padding-left: 2px;
+}
+
+.titlee::before,
+.titlee::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background-color: royalblue;
+}
+
+.titlee::after {
+  animation: pulse 1s linear infinite;
+}
+
+.message {
+  color: rgba(88, 87, 87, 0.82);
+  font-size: 0.9rem;
+  text-align: center;
+  margin-top: -20px;
+}
+
+label {
+  position: relative;
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+input.input {
+  width: 100%;
+  padding: 12px 2px;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: 1px solid #8d8d8d;
+  letter-spacing: 1px;
+  outline: none;
+}
+
+input.input:focus {
+  border-color: #0034de;
+}
+
+label span {
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #8d8d8d;
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+
+input.input:focus + span,
+input.input:not(:placeholder-shown) + span {
+  transform: translateY(-50%) translateX(-10px) scale(0.8);
+  background-color: #fff;
+  padding: 0 5px;
+  color: #0034de;
+  font-weight: bold;
+  border-radius: 100px;
+}
+
+.submit {
+  padding: 12px 20px;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  border-radius: 10px;
+  border: 1px solid #1034aa;
+  background: linear-gradient(135deg, #0034de, #006eff);
+  color: #fff;
+  font-weight: bolder;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  box-shadow: 0px 2px 3px #000d3848, inset 0px 4px 5px #0070f0,
+    inset 0px -4px 5px #002cbb;
+}
+
+.submit:hover {
+  background-color: rgb(56, 90, 194);
+}
+
+.submit:active {
+  transform: scale(0.995);
+  box-shadow: inset 0px 4px 5px #0070f0, inset 0px -4px 5px #002cbb;
+}
+
+.signin {
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+.signin a {
+  color: royalblue;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.signin a:hover {
+  text-decoration: underline;
+}
+
+@keyframes pulse {
+  from {
+    transform: scale(0.9);
+    opacity: 1;
+  }
+  to {
+    transform: scale(1.8);
+    opacity: 0;
+  }
+}
